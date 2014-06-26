@@ -1,0 +1,27 @@
+{
+  "name": "synthetic",
+  "version": "0.0.0",
+  "description": "A Javascript Dom Wrapper",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/megheaiulian/synthetic.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Meghea Iulian <me@megheaiulian.com> (http://megheaiulian.com)",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/megheaiulian/synthetic/issues"
+  },
+  "homepage": "https://github.com/megheaiulian/synthetic",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^2.1.1",
+    "coffeeify": "^0.6.0"
+  }
+}

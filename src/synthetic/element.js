@@ -1,12 +1,11 @@
+var Module = require('./module');
 var Element = { 
 	tag  	: 'div',
 	init: function(options){
 		var self = this;
 		
 		self.options = options;
-		Object.keys(options).forEach(function(key){
-			self[key] = options[key];
-		});
+		Object.assign(self,options);
 
 		self.el = self.el || document.createElement(self.tag);
 
@@ -31,4 +30,5 @@ var Element = {
 		return self.el.querySelectorAll(selector);
 	}
 }
+Element = Module.extend(Element);
 module.exports = Element

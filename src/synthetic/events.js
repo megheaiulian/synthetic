@@ -66,4 +66,5 @@ var Events = {
 		return self;
 	}
 }
+Events = Module.extend(Events);
 module.exports = Events

@@ -1,4 +1,3 @@
-var Module = require('./module');
 var Element = { 
 	tag  	: 'div',
 	init : function(options){
@@ -34,7 +33,4 @@ var Element = {
 		return self.el.querySelectorAll(selector);
 	}
 }
-
-module.exports = Object.create(Module,{
-	proto:{enumerable:true,value:Element}
-});
+module.exports = Element

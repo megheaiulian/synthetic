@@ -1,5 +1,4 @@
-var Module = require('./module')
-var EventsProto = {
+var Events = {
 	on : function(ev,cb){
 		var evs = ev.split(' '), 
 			self = this,
@@ -67,9 +66,5 @@ var EventsProto = {
 		return self;
 	}
 }
-
-module.exports = Object.create(Module,{
-	proto: {enumerable:true, value:Events}
-});
 
 module.exports = Events

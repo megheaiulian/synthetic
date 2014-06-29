@@ -66,5 +66,4 @@ var Events = {
 		return self;
 	}
 }
-
 module.exports = Events

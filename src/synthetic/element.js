@@ -1,6 +1,6 @@
 var Element = { 
 	tag  	: 'div',
-	init : function(options){
+	init: function(options){
 		var self = this;
 		
 		self.options = options;
@@ -22,9 +22,7 @@ var Element = {
 	},
 	release : function(){
 		var self = this;
-		//self.events.trigger('release', self)
 		self.el.remove();
-		//self.events.unbind();
 	},
 	query 	: function(selector){
 		return self.el.querySelector(selector);

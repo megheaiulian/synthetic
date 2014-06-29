@@ -1,6 +1,5 @@
 util = require 'util'
 module.exports = (grunt)=>
-
 	aliasify = (aliases)->
 		aliasArray = [];
 		aliases = if util.isArray(aliases) then aliases else [aliases];
@@ -17,12 +16,9 @@ module.exports = (grunt)=>
 				dest: 'lib/index.js'
 				src:[]            
 				options:
-					transform: ['coffeeify']
-					browserifyOptions:
-						extensions:['.coffee','.jade']
 					alias: aliasify
 						cwd 	: 'src/synthetic',
-						src 	: ['*.coffee','**/*.coffee']
+						src 	: ['*.js','**/*.js']
 						dest	: 'synthetic'
 	)
 	grunt.loadNpmTasks "grunt-browserify"

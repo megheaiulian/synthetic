@@ -24,10 +24,10 @@ var Element = {
 		self.el.remove();
 	},
 	query 	: function(selector){
-		return self.el.querySelector(selector);
+		return this.el.querySelector(selector);
 	},
 	queryAll : function(selector){
-		return self.el.querySelectorAll(selector);
+		return this.el.querySelectorAll(selector);
 	}
 }
 Element = Module.extend(Element);

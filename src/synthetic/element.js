@@ -28,6 +28,9 @@ var Element = {
 	},
 	queryAll : function(selector){
 		return this.el.querySelectorAll(selector);
+	},
+	on:function(event,selector,callback){
+		
 	}
 }
 Element = Module.extend(Element);

@@ -22,8 +22,8 @@ var Synthetic = {
 	mixfill : new MixFill("http://mixfill.herokuapp.com"),
 	ready  : function(fn){
 		var self = this;
-		mixfill.needs(['eventListener','promise']).load(function(){
-			read()(function(){
+		self.mixfill.needs(['eventListener','promise']).load(function(){
+			ready()(function(){
 				fn();
 			});
 		});

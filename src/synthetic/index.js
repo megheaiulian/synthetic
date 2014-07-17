@@ -16,7 +16,7 @@ var MixFill = require('mixfill'),
 		loaded ? fn() : fns.push(fn)
 	}
 
-});
+};
 
 var Synthetic = {
 	mixfill : new MixFill("http://mixfill.herokuapp.com"),

@@ -31,7 +31,7 @@ var request = function(url,method,data){
 	return new Promise(function(resolve,reject){
 		req.onload = function(){
 			if(req.status == 200){
-				resolve(req.response);
+				resolve(req.responseText);
 			}else{
 				reject(Error(req.statusText));
 			}

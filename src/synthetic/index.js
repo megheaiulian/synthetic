@@ -19,10 +19,10 @@ var MixFill = require('mixfill'),
 };
 
 var Synthetic = {
-	mixfill : new MixFill("http://mixfill.herokuapp.com"),
+	mixfill : new MixFill("http://mixfill.herokuapp.com/"),
 	ready  : function(fn){
 		var self = this;
-		self.mixfill.needs(['elementClassList','eventListener','promise']).load(function(){
+		self.mixfill.needs(['elementClassList','elementMatches','es5','es5Object','eventListener','promise']).load(function(){
 			ready()(function(){
 				fn();
 			});

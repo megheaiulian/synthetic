@@ -29,13 +29,18 @@ var request = function(url,method,data){
 		data = serialized.join('&');
 	}
 	return new Promise(function(resolve,reject){
-		req.onload = function(){
+		var onload = function(){
 			if(req.status == 200){
 				resolve(req.responseText);
 			}else{
 				reject(Error(req.statusText));
 			}
 		};
+		if(!('onload' in req) && ('onreadystatechange' in req)){
+			req.onreadystatechange = onload;
+		}else{
+			req.onload = onload;
+		}
 		req.onerror = function(){
 			reject(Error('Network Error'));
 		};

@@ -29,9 +29,8 @@ var Synthetic = {
 		var self = this;
 		self.mixfill.all(function(err){
 			ready()(function(){
-				fn(cb);
+				cb(err);
 			});
-
 		});
 	},
 	needs : function(features){

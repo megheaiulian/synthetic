@@ -1,6 +1,6 @@
 {
   "name": "synthetic",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "A Javascript Dom Wrapper",
   "main": "src/index.js",
   "scripts": {
@@ -24,6 +24,6 @@
     "grunt-browserify": "^2.1.1"
   },
   "dependencies": {
-    "mixfill": "0.0.16"
+    "mixfill": "0.0.20"
   }
 }

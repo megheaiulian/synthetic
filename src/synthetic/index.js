@@ -20,12 +20,18 @@ var MixFill = require('mixfill'),
 
 var Synthetic = {
 	mixfill : new MixFill("http://mixfill.herokuapp.com/"),
-	ready  : function(fn){
+	setBase: function(){
 		var self = this;
-		self.mixfill.needs(['elementClassList','elementMatches','es5','es5Object','eventListener','promise']).load(function(){
+		self.mixfill.setBase(base);
+		return self;
+	},
+	ready  : function(cb){
+		var self = this;
+		self.mixfill.all(function(err){
 			ready()(function(){
-				fn();
+				fn(cb);
 			});
+
 		});
 	},
 	needs : function(features){

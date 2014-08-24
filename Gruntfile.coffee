@@ -22,3 +22,4 @@ module.exports = (grunt)=>
 						dest	: 'synthetic'
 	)
 	grunt.loadNpmTasks "grunt-browserify"
+	grunt.registerTask 'default', ['browserify']

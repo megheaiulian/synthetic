@@ -1,3 +1,4 @@
+var Module = require('./module');
 var Events = {
 	on : function(ev,cb){
 		var evs = ev.split(' '), 

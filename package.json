@@ -24,6 +24,6 @@
     "grunt-browserify": "^2.1.1"
   },
   "dependencies": {
-    "mixfill": "0.0.20"
+    "mixfill": "0.0.21"
   }
 }

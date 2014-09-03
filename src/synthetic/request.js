@@ -29,19 +29,22 @@ var request = function(url,method,data){
 		data = serialized.join('&');
 	}
 	return new Promise(function(resolve,reject){
-		var onload = function(){
-			if(req.status == 200){
-				resolve(req.responseText);
-			}else{
-				reject(Error(req.statusText));
+		var done = 0;
+		console.log('req')
+
+		req.onload = req.onreadystatechange = function () {
+			if(!done && (!req.readyState || req.readyState == 4)){
+				done = 1;
+				if(req.status == 200 || req.status == 304){
+					resolve(req.responseText);
+				}else{
+					reject(Error(req.statusText));
+				}
+				req.onload = req.onreadystatechange = null;
 			}
 		};
-		if(!('onload' in req) && ('onreadystatechange' in req)){
-			req.onreadystatechange = onload;
-		}else{
-			req.onload = onload;
-		}
 		req.onerror = function(){
+			done = 1;
 			reject(Error('Network Error'));
 		};
 

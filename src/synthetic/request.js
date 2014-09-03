@@ -30,7 +30,6 @@ var request = function(url,method,data){
 	}
 	return new Promise(function(resolve,reject){
 		var done = 0;
-		console.log('req')
 
 		req.onload = req.onreadystatechange = function () {
 			if(!done && (!req.readyState || req.readyState == 4)){

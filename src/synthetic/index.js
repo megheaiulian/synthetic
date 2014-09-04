@@ -19,7 +19,7 @@ var MixFill = require('mixfill'),
 };
 
 var Synthetic = {
-	mixfill : new MixFill("http://mixfill.herokuapp.com/"),
+	mixfill : new MixFill(MIXFILL_BASE||"http://mixfill.herokuapp.com/"),
 	setBase: function(){
 		var self = this;
 		self.mixfill.setBase(base);

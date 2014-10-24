@@ -17,6 +17,7 @@ var request = function(url,method,data){
 			return new ActiveXObject('Microsoft.XMLHTTP');
 		}
 	})();
+	
 	if (!req) {
 		throw new Error ('Browser doesn\'t support XHR');
 	}
